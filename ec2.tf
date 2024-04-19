@@ -23,7 +23,7 @@ resource "aws_instance" "web" {
   #   associate_public_ip_address = true
 }
 
-output "fuckedup" {
+output "akunamatata" {
   value = aws_instance.web.public_ip
 
 }
