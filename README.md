@@ -1,5 +1,5 @@
 # terraform-aws-vpcbatch5
-Create main.tf file and input following:
+## Create main.tf file and input following:
 ```hcl
 module "vpc" {
     source = "01Zak01/vpcbatch5/aws"
@@ -13,9 +13,10 @@ module "vpc" {
     subnet1_name = "hello1"
     subnet2_name = "hello2"
     subnet3_name = "hello3"
+    ports = [22, 80, 443]
 }
 ```
-create apache.sh file and input script: eg.
+## create apache.sh file and input script: eg.
 ```hcl
 #!/bin/bash
 sudo apt update 
