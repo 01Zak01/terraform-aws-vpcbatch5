@@ -24,31 +24,34 @@ variable "subnet3_cidr" {
 }
 
 variable "instance_type" {
-  type = string
+  type        = string
   description = "provide instance type"
 }
 
 variable "ip_on_launch" {
-  type = bool
+  type        = bool
   description = "true or false"
 }
 
-variable subnet1_name {
-  type = string
+variable "subnet1_name" {
+  type        = string
   description = "Provide subnet1 name"
 }
 
-variable subnet2_name {
-  type = string
+variable "subnet2_name" {
+  type        = string
   description = "Provide subnet2 name"
 }
 
-variable subnet3_name {
-  type = string
+variable "subnet3_name" {
+  type        = string
   description = "Provide subnet3 name"
 }
 
-variable ports {
-  type = list(number)
-  description = "provide list of 3 ports"
+variable "ports" {
+  type = list(object({
+    from_port = number
+    to_port   = number
+  }))
+  description = "provide list of ports"
 }
