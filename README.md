@@ -15,9 +15,10 @@ module "vpc" {
     subnet2_name = "hello2"
     subnet3_name = "hello3"
     ports = [
-          { from_port = 22, to_port = 22 },
+          { from_port = 22, to_port = 22 }, #provide list of ports
           { from_port = 80, to_port = 80 },
-          { from_port = 443, to_port = 443 }    #provide list of ports
+          { from_port = 443, to_port = 443 }
+        ]    
 }
 ```
 ## create apache.sh file and input script: eg.
